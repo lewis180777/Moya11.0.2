@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14C89BA0374296E3394DD5C2 /* Pods_Moya11_0_2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9149E5A863FB8DCF78E97A10 /* Pods_Moya11_0_2Tests.framework */; };
+		851534842106B8B6007D391A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 851534832106B8B6007D391A /* README.md */; };
 		85FF13022105B30300EED225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FF13012105B30300EED225 /* AppDelegate.swift */; };
 		85FF13042105B30300EED225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FF13032105B30300EED225 /* ViewController.swift */; };
 		85FF13072105B30300EED225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FF13052105B30300EED225 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		0A83CF0ADE69B622B5CE73C6 /* Pods_Moya11_0_2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moya11_0_2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72565AF179E1C6D8DA7DABDD /* Pods-Moya11.0.2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moya11.0.2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moya11.0.2UITests/Pods-Moya11.0.2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		851534832106B8B6007D391A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		85FF12FE2105B30300EED225 /* Moya11.0.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moya11.0.2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85FF13012105B30300EED225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85FF13032105B30300EED225 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		85FF13002105B30300EED225 /* Moya11.0.2 */ = {
 			isa = PBXGroup;
 			children = (
+				851534832106B8B6007D391A /* README.md */,
 				85FF132F2105B6F500EED225 /* MoyaManage */,
 				85FF13012105B30300EED225 /* AppDelegate.swift */,
 				85FF13032105B30300EED225 /* ViewController.swift */,
@@ -292,6 +295,7 @@
 			files = (
 				85FF130C2105B30600EED225 /* LaunchScreen.storyboard in Resources */,
 				85FF13092105B30600EED225 /* Assets.xcassets in Resources */,
+				851534842106B8B6007D391A /* README.md in Resources */,
 				85FF13072105B30300EED225 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

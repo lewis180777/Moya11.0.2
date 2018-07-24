@@ -33,6 +33,7 @@ let json_HEADER = "\"@class\":\"com.ailk.gx.mapp.model.GXCHeader\",\"bizCode\":\
 
 enum NetAPIManager {
     case Show
+    case uploadGif(Data, description: String)
     case upload(bodyData: Data)
     case download
     case request(APIName: String ,isTouch: Bool, body: Dictionary<String, Any>? ,isShow: Bool,title: String?)
@@ -97,6 +98,8 @@ extension NetAPIManager: TargetType {
             return "mobile/" + apiName
         case .download:
             return ""
+        case .uploadGif(_, let _):
+            return ""
         }
     }
     
@@ -146,13 +149,25 @@ extension NetAPIManager: TargetType {
     }
     
     var task: Task {
-        
         switch self {
 
+        case let .uploadGif(data, description):
+            let gifData = MultipartFormData(provider: .data(data), name: "file", fileName: "gif.gif", mimeType: "image/gif")
+            let multipartData = [gifData]
+            let urlParameters = ["description": description]
+            
+            return .uploadCompositeMultipart(multipartData, urlParameters: urlParameters)
+            
+            // **********  两种方式都可以  ********** //
+            
+//            let gifData = MultipartFormData(provider: .data(data), name: "file", fileName: "gif.gif", mimeType: "image/gif")
+//            let descriptionData = MultipartFormData(provider: .data(description.data(using: .utf8)!), name: "description")
+//            let multipartData = [gifData, descriptionData]
+//            
+//            return .uploadMultipart(multipartData)
         
         case .upload(let data):
-            
-            return .uploadMultipart([MultipartFormData(provider: .data(data), name: "file", fileName: "gif.gif", mimeType: "image/gif")])
+        return .uploadMultipart([MultipartFormData(provider: .data(data), name: "file", fileName: "gif.gif", mimeType: "image/gif")])
         case  .Show:
             let jsonDic = ["loginName": "13811111111","password": "08065030"] as [String: Any]
             return .requestParameters(parameters: jsonDic, encoding: URLEncoding.default)
